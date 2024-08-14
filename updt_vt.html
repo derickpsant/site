@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alimentoconsciente.com</title>
+    <link rel="shortcut icon" href="logoetec.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="./css/updt_php.css"/>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+</head>
+<body>
+    <div class="linha">
+        <div id="dvlghr" class="col-lg-12 ">
+            <p id="dataAtual"></p>
+            <script>
+                function atualizarDataHora() {
+                    var diasSemana = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'];
+                    var meses = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
+                    
+                    var dataAtual = new Date();
+                    var diaSemana = diasSemana[dataAtual.getDay()];
+                    var mes = meses[dataAtual.getMonth()];
+                    var data = dataAtual.getDate();
+                    var ano = dataAtual.getFullYear();
+                    
+                    var dataFormatada = diaSemana + ", " + mes + " " + data + ", " + ano;
+                    document.getElementById('dataAtual').innerHTML = dataFormatada;
+                }
+                atualizarDataHora();
+            </script>
+        </div>
+    </div>
+
+    <div class="linha">
+        <div id="dvlogo" class="col-lg-1">&nbsp;</div>
+        <div id="dvlogo" class="col-lg-5 centro">
+            <img src="./images/eteclogo.png" alt="Logo Etec" id="logopng">
+        </div>
+        <div id="dvlogo" class="col-lg-5 centro">
+            <img src="./images/logo_cps_gov_transparente.png" alt="logo cps e gov" id="logopng2">
+        </div>
+        <div id="dvlogo" class="col-lg-1">&nbsp;</div>
+    </div>
+
+    <div class="linha">
+        <div id="dvline" class="col-lg-12 ">&nbsp;</div>
+        <div id="dvtitulo" class="col-lg-12 coramarelo centro">
+            NÃO AO DESPERDÍCIO ALIMENTAR
+        </div>
+    </div>
+
+    <div class="menu-wrapper">
+        <div class="dropdown">
+            <button class="dropbtn"><img src="images/Horizontal-Line-Transparent.png" height="20px" width="25px"></button>
+            <div class="dropdown-content">
+                <a href="history.html">Contexto</a>
+                <a href="qsmos.html">Quem Somos</a>
+                <a href="index.html">Formulário</a>
+                <a href="updt_vt.html">Relatório votos</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12">
+        <div class="line-grafico col-lg-4">
+                <center><h1>Manhã</h1></center>
+                    <div class="grafico">
+                        <canvas id="manhaChart"></canvas>
+                    </div>
+            </div>
+
+            <div class="line-grafico col-lg-4">
+                <center><h1>Tarde</h1></center>
+                    <div class="grafico">
+                        <canvas id="tardeChart"></canvas>
+                    </div>
+            </div>
+
+            <div class="line-grafico col-lg-4">
+                <center><h1>Noite</h1></center>
+                    <div class="grafico">
+                        <canvas id="noiteChart"></canvas>
+                    </div>
+            </div>
+    </div>
+    
+    <script>
+        var manhaChart, tardeChart, noiteChart;
+
+        function createPieChart(ctx, data) {
+            return new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: ['Sim', 'Não'],
+                    datasets: [{
+                        data: [data.sim, data.nao],
+                        backgroundColor: ['#46BFBD', '#F7464A'],
+                        hoverBackgroundColor: ['#5AD3D1', '#FF5A5E']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                }
+            });
+        }
+
+        function updatePieChart(chart, data) {
+            chart.data.datasets[0].data = [data.sim, data.nao];
+            chart.update();
+        }
+
+        function fetchData() {
+            $.getJSON('data.php', function(data) {
+                var manhaData = { sim: data.manha_sim, nao: data.manha_nao };
+                var tardeData = { sim: data.tarde_sim, nao: data.tarde_nao };
+                var noiteData = { sim: data.noite_sim, nao: data.noite_nao };
+
+                if (manhaChart && tardeChart && noiteChart) {
+                    updatePieChart(manhaChart, manhaData);
+                    updatePieChart(tardeChart, tardeData);
+                    updatePieChart(noiteChart, noiteData);
+                } else {
+                    manhaChart = createPieChart(document.getElementById('manhaChart').getContext('2d'), manhaData);
+                    tardeChart = createPieChart(document.getElementById('tardeChart').getContext('2d'), tardeData);
+                    noiteChart = createPieChart(document.getElementById('noiteChart').getContext('2d'), noiteData);
+                }
+            });
+        }
+
+        $(document).ready(function() {
+            fetchData(); // fetch initial data
+            setInterval(fetchData, 5000); // fetch data every 5 seconds
+        });
+    </script>
+
+<div class="linha">      <!-- Logos | Endereço | Contatos  -->
+    <div id="dvmdcc" class="col-lg-2">
+        &nbsp;
+    </div>
+    <div id="dvmdcc" class="col-lg-4">
+        <img src="images/logo_baixo_nengue.png" alt="etec" id="imgcopy">
+    </div>
+    <div id="dvmdcc" class="col-lg-3">
+        <p>
+            Endereço
+            <hr>
+        </p>
+        <p>
+            Avenida Benedito Lázaro Vieira, S/Nº<br>
+            Santo Antônio - Monte Mor/SP CEP: 13.190-120
+        </p>
+        
+    </div>
+    <div id="dvmdcc" class="col-lg-3">
+        <p>
+            Contatos
+            <hr>
+        </p>
+        <p>
+            (19) 3879-6518<br>
+            (19) 3879-6515<br>
+            e198.atendimento@etec.sp.gov.br
+        </p>
+    </div>
+</div>
+
+<div class="linha">      <!-- Copyrigh Baixo Nengué | Tema --> 
+    <div id="dvcopyt" class="col-lg-2 ">
+        &nbsp;
+    </div>
+    <div id="dvcopyt" class="col-lg-10">
+        <p>
+            Copyright &copy; 2024 Etec de Monte Mor. Todos os direitos reservados.
+        </p>
+        <p>
+            Tema: Desenvolvimento De Software Para Minimizar Desperdício Alimentar Na Merenda Escola Da Etec Monte Mor.
+        </p>
+    </div>
+</div> 
+</body>
+</html>

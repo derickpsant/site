@@ -1,0 +1,259 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+:root {
+	--cor-primary: #ffffff;
+	--cor-secundary: #000000;
+}
+
+* {
+	font-family: Arial, Helvetica, sans-serif;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-size: 16px;
+}
+
+body {
+	height: 100vh;
+	background-color: gray;	
+}
+/*-----------------------------------------------------------------------------------------*/
+
+
+
+/*-----------------------------------------------------------------------------------------*/
+
+#dvlghr {
+	height: 40px;
+	color: rgb(100, 100, 100);
+	background-color: #F8F8F8;
+	border: 1px solid rgba(197, 197, 197, 0.493);
+	font-size: 16px;
+}
+#dataAtual{
+	margin-left: 425px;
+	margin-top: 11px;
+}
+
+#dvlogo {
+	height: 225px;
+    color:#000000; 
+	background-color: #ffffff;
+	background-image: linear-gradient(to top,  rgba(133, 132, 132, 0.493), transparent);
+	font-size: 20px;
+}
+#logopng{
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	width: 500px;
+	height: 10	5px;
+	margin-top: 52px;
+	margin-left: 140px;
+}
+#logopng2{
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	width: 440px;
+	height: 105px;
+	margin-top: 52px;
+	margin-right: 155px;
+}
+
+
+#dvline {
+	height: 5px;
+	background-color: #B20000;
+}
+
+
+#dvtitulo {
+	align-items: center;
+	width: 100%;
+	height: 44px;
+	color: #000000;
+	background-color: #ffffff;
+	border: 1px solid rgba(197, 197, 197, 0.493);
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 42px;
+	font-weight: bold;
+	text-align: center;   
+}
+
+.dp-menu ul{
+	list-style-type: none;
+	padding: 0;
+}
+.dp-menu ul {
+	background-color: #B20000;
+	
+}
+.dp-menu ul li {
+	display: inline;
+	position: relative;
+}
+.dp-menu ul li a{
+	color:#000000;
+	text-decoration: none;
+	display: inline-block;
+	padding: 10px;
+	transition: .3s;
+
+}
+.dp-menu ul li a:hover {
+	background-color: aqua;
+}
+
+/*sub menu*/
+
+.dp-menu ul ul{
+	display: none;
+	left: 0;
+	position: absolute;
+}
+
+.dp-menu ul li:hover ul {
+	display: block;
+}
+
+.dp-menu ul ul{
+	width: 150px;
+}
+
+.dp-menu ul ul li a{
+	display: block;
+	
+}
+
+
+
+
+
+
+main {
+	margin: auto;
+	min-width: 320px;
+	max-width: 1580px;
+
+	background-color: #ffffff;
+	font-family: Arial, Helvetica, sans-serif;
+	place-items: center;
+	
+	h2{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:25px;
+	}
+	p{
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:20px;
+	}
+}
+#dvmdcc{
+	height: 260px;
+	background-color: #303440;
+	color: #ffffff;
+	font-size: 20px;
+
+}
+
+
+#imgcopy {
+	height: 100px;
+	width: 400px;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	margin-top: 60px;
+	margin-right: 50px;
+}
+
+
+
+#dvcopyt {
+	height: 77px;
+	color: #B1B6B6;
+	background-color: #252730;
+	font-size:14px;
+}
+
+
+
+/*-----------------------------------------------------------------------------------------*/
+	/* Alinhamento Vertical */
+	.topo {
+		vertical-align: top;
+	}
+	
+	.meio {
+		vertical-align: middle;
+	}
+	
+	.abaixo {
+		vertical-align: bottom;
+	}
+	
+/*-----------------------------------------------------------------------------------------*/
+
+.linha {
+	width: 100%;
+	height: 20px;
+}
+.col-lg-1 {
+	width: 8.33%;
+	float: left;
+}
+
+.col-lg-2 {
+	width: 16.66%;
+	float: left;
+}
+
+.col-lg-3 {
+	width: 25%;
+	float: left;
+}
+
+.col-lg-4 {
+	width: 33.33%;
+	float: left;
+}
+
+.col-lg-5 {
+	width: 41.66%;
+	float: left;
+}
+
+.col-lg-6 {
+	width: 50%;
+	float: left;
+}
+
+.col-lg-7 {
+	width: 58.33%;
+	float: left;
+}
+
+.col-lg-8 {
+	width: 66.66%;
+	float: left;
+}
+
+.col-lg-9 {
+	width: 75%;
+	float: left;
+}
+
+.col-lg-10 {
+	width: 83.33%;
+	float: left;
+}
+
+.col-lg-11 {
+	width: 91.66%;
+	float: left;
+}
+
+.col-lg-12 {
+	width: 100%;
+	float: left;
+}
+
+/*-----------------------------------------------------------------------------------------*/

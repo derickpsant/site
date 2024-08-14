@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Alimentoconsciente.com</title>
+        <link rel="shortcut icon" href="logoetec.ico" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="./css/history_styles.css"/>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    </head>
+
+    <body>
+        <div id="dvlghr">     <!-- HORARIO E ALERTAS {Concluido}-->
+            <p id="dataAtual"></p>
+
+            <script>
+            // Função para obter o dia da semana, o mês escrito, a data e o ano atuais
+            function atualizarDataHora() {
+            var diasSemana = ['Domingo', 'Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado'];
+
+            var meses = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
+            
+            var dataAtual = new Date();
+            var diaSemana = diasSemana[dataAtual.getDay()];
+            var mes = meses[dataAtual.getMonth()];
+            var data = dataAtual.getDate();
+            var ano = dataAtual.getFullYear();
+            
+            // Construir a string com as informações obtidas
+            var dataFormatada = diaSemana + ", " + mes + " " + data + ", " + ano;
+            
+            // Atualizar o conteúdo do elemento HTML com o ID 'dataAtual' com a data formatada
+            document.getElementById('dataAtual').innerHTML = dataFormatada;
+            }
+            
+            // Chamar a função inicialmente para exibir a data atual
+            atualizarDataHora();
+            </script>
+        </div>
+
+        <div class="linha">      <!-- LOGO  { atualizar }-->
+            <div id="dvlogo" class="col-lg-1">
+                &nbsp;
+            </div>
+
+            <div id="dvlogo" class="col-lg-5 centro">
+                <img src="./images/eteclogo.png"  alt="Logo Etec" id="logopng">
+            </div>
+            <div id="dvlogo" class="col-lg-5 centro">
+                <img src="./images/logo_cps_gov_transparente.png"  alt="logo cps e gov" id="logopng2">
+            </div>
+
+            <div id="dvlogo" class="col-lg-1">
+                &nbsp;
+            </div>
+        </div>
+
+        <div class="linha">      <!-- Line Vermelha { atualizar }-->
+            <div id="dvline" class="col-lg-12 " >
+                &nbsp;                
+            </div>
+        </div>
+      
+        <nav class="dp-menu">     <!-- Menu { Quase la }-->
+            <ul>
+                <li><a href="#">"home"</a></li>
+                
+                <li><a href="#">Contexto</a>
+                    <ul>
+                        <li><a href="#">Exemplo</a></li>
+                        
+                    </ul>
+                </li>
+                    
+                <li><a href="#">Quem Somos</a>
+                    <ul>
+                        <li><a href="#">Exemplo</a></li>
+                        
+                    </ul>
+                </li>
+                   
+                <li><a href="#">Formulario</a>
+                    <ul>
+                        <li><a href="#">Exemplo</a></li>
+                        
+                    </ul>
+                </li>
+                    
+                <li><a href="#">Relatorio Voto</a>
+                    <ul>
+                        <li><a href="#">Exemplo</a></li>
+                    </ul>
+                </li>
+                    
+            </ul>
+        </nav>
+
+        <header>     <!-- Titulo Principal { atualizar }-->
+            <div id="dvtitulo">
+                <span>NÃO AO DESPERDÍCIO ALIMENTAR</span>
+            </div> 
+        </header>
+
+       <main>     <!-- Conteudo -->
+            <section>
+                <article>
+                    <h2>Desperdício Alimentar: Um Problema Global que Requer Soluções Locais</h2>
+                    <p>
+                        O desperdício alimentar é um problema de proporções alarmantes em todo o mundo, afetando não
+                        apenas os aspectos econômicos, ambientais e sociais, mas também a ética e a moralidade por trás da
+                        distribuição desigual de recursos. A cada ano, toneladas de alimentos perfeitamente comestíveis são
+                        descartadas, enquanto milhões de pessoas em todo o mundo sofrem com a fome e a desnutrição. Este
+                        paradoxo evidencia uma desconexão séria entre a produção e o consumo de alimentos, destacando a
+                        necessidade urgente de ações concretas.
+                    </p>
+                    <p>
+                        Uma das principais causas do desperdício alimentar é a superprodução. Nas cadeias de suprimento
+                        alimentar, quantidades excessivas de alimentos são produzidas para atender às demandas imprecisas
+                        do mercado. Essa superprodução leva ao descarte de alimentos ainda frescos e consumíveis. Além disso,
+                        o consumismo exacerbado e os padrões estéticos irreais contribuem para o desperdício, uma vez que
+                        alimentos perfeitamente saudáveis são descartados devido a pequenas imperfeições visuais.
+                    </p>
+                    <p>
+                        Para enfrentar esse desafio complexo, é fundamental adotar uma abordagem multifacetada. Em
+                        primeiro lugar, a conscientização é essencial. Programas educacionais e campanhas de sensibilização
+                        podem ajudar a informar o público sobre o impacto do desperdício alimentar e incentivar práticas mais
+                        sustentáveis de compra, armazenamento e consumo de alimentos.
+                    </p>
+                    <p>
+                        Além disso, é necessário repensar os sistemas de distribuição de alimentos. Parcerias entre supermercados,
+                        restaurantes e organizações de caridade podem ajudar a redistribuir alimentos excedentes para comunidades
+                        carentes em vez de descartá-los. Políticas públicas também desempenham um papel crucial, incentivando
+                        práticas de produção mais sustentáveis, implementando regulamentações para reduzir o desperdício e
+                        promovendo incentivos para doações de alimentos.
+                    </p>
+                    <p>
+                        A tecnologia também pode ser uma aliada poderosa na luta contra o desperdício alimentar. Aplicativos
+                        móveis e plataformas online podem conectar estabelecimentos comerciais e consumidores a alimentos
+                        excedentes, facilitando sua redistribuição e evitando que sejam desperdiçados.
+                    </p>
+                    <p>
+                        Além disso, é importante promover a compostagem de resíduos alimentares para reduzir o impacto ambiental
+                        do desperdício. Transformar resíduos orgânicos em adubo pode ajudar a fertilizar solos e reduzir a
+                        dependência de fertilizantes químicos prejudiciais ao meio ambiente.
+                    </p>
+                </article>
+
+                <aside>
+                    <p>
+                        Em última análise, combater o desperdício alimentar requer um esforço conjunto de governos,
+                        indústria, comunidades e indivíduos. Somente através de uma abordagem integrada e colaborativa podemos
+                        esperar enfrentar efetivamente esse desafio global e criar um sistema alimentar mais justo, sustentável
+                        e equitativo para todos.
+                    </p>
+                </aside>
+            </section>
+        </main>
+
+        <div class="linha">      <!-- Logos | Endereço | Contatos  { atualizar }-->
+            <div id="dvmdcc" class="col-lg-2">
+                &nbsp;
+            </div>
+            <div id="dvmdcc" class="col-lg-4">
+                <img src="images/logo_baixo_nengue.png" alt="etec" id="imgcopy">
+            </div>
+            <div id="dvmdcc" class="col-lg-3">
+                <p>
+                    Endereço
+                    <hr>
+                </p>
+                <p>
+                    Avenida Benedito Lázaro Vieira, S/Nº<br>
+                    Santo Antônio - Monte Mor/SP CEP: 13.190-120
+                </p>
+                
+            </div>
+            <div id="dvmdcc" class="col-lg-3">
+                <p>
+                    Contatos
+                    <hr>
+                </p>
+                <p>
+                    (19) 3879-6518<br>
+                    (19) 3879-6515<br>
+                    e198.atendimento@etec.sp.gov.br
+                </p>
+            </div>
+       </div>
+
+       <footer>      <!-- Copyrigh Baixo Nengué | Tema { atualizar }--> 
+            <div id="dvcopyt" class="col-lg-2 ">
+                &nbsp;
+            </div>
+            <div id="dvcopyt" class="col-lg-10">
+                <p>
+                    Copyright &copy; 2024 Etec de Monte Mor. Todos os direitos reservados.
+                </p>
+                <p>
+                    Tema: Desenvolvimento De Software Para Minimizar Desperdício Alimentar Na Merenda Escola Da Etec Monte Mor.
+                </p>
+            </div>
+       </footer> 
+    </body>
+</html>
