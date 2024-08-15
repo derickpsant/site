@@ -79,13 +79,19 @@ body {
 	text-align: center;   
 }
 
+li#home{
+	background: #B20000;
+	padding-top: 10px;
+	padding-bottom:11px ;
+}
 .dp-menu ul{
 	list-style-type: none;
 	padding: 0;
+	padding-left: 105px;
+
 }
 .dp-menu ul {
-	background-color: #B20000;
-	
+	background-color: #ffffff;
 }
 .dp-menu ul li {
 	display: inline;
